@@ -45,7 +45,7 @@ const HeroSection = () => {
       </div>
       <div className="banner-container">
         <div className="banner-container-first">
-          <div>
+          <div style={{overflow:'hidden'}}>
             <h1>
               Sign Up today
                and claim your 
