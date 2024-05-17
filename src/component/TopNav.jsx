@@ -6,7 +6,38 @@ import battlesIcon from "../assets/battles-icon.svg";
 import vipIcon from "../assets/crown-icon.svg";
 import affiliatesIcon from "../assets/men-icon.svg";
 
-
+const topNaveItem = [
+  {
+    id: 1,
+    name: "Home",
+    icon: homeIcon,
+    href: "#home",
+  },
+  {
+    id: 2,
+    name: "Boxes",
+    icon: boxesIcon,
+    href: "#boxes",
+  },
+  {
+    id: 3,
+    name: "Battles",
+    icon: battlesIcon,
+    href: "#battles",
+  },
+  {
+    id: 4,
+    name: "VIP Members",
+    icon: vipIcon,
+    href: "#vip",
+  },
+  {
+    id: 5,
+    name: "Affiliates",
+    icon: affiliatesIcon,
+    href: "#affiliates",
+  },
+];
 
 const TopNavigation = () => {
   return (
@@ -15,40 +46,21 @@ const TopNavigation = () => {
         <img src={logo} alt="logo" className="logo" />
       </div>
       <div className="nav-links">
-        <div className="nav-item ">
-          <img src={homeIcon} alt="Home icon" className="nav-icon" />
-          <a href="#home" class="nav-item-link active">
-            Home
-          </a>
-        </div>
-        <div className="nav-item">
-          <img src={boxesIcon} alt="Boxes icon" className="nav-icon" />
-          <a href="#boxes" className=" nav-item-link ">
-            Boxes
-          </a>
-        </div>
-        <div className="nav-item">
-          <img src={battlesIcon} alt="Battles icon" className="nav-icon" />
-          <a href="#battles" className=" nav-item-link ">
-            Battles
-          </a>
-        </div>
-        <div className="nav-item">
-          <img src={vipIcon} alt="VIP icon" className="nav-icon" />
-          <a href="#vip" className=" nav-item-link ">
-            VIP Members
-          </a>
-        </div>
-        <div className="nav-item">
-          <img
-            src={affiliatesIcon}
-            alt="Affiliates icon"
-            className="nav-icon"
-          />
-          <a href="#affiliates" className=" nav-item-link ">
-            Affiliates
-          </a>
-        </div>
+        {topNaveItem?.map((item, index) => (
+          <div className="nav-item" key={item.id}>
+            <img
+              src={item.icon}
+              alt={`${item.name} icon`}
+              className="nav-icon"
+            />
+            <a
+              href={item.href}
+              className={`nav-item-link ${index === 0 ? "active" : ""}`}
+            >
+              {item.name}
+            </a>
+          </div>
+        ))}
       </div>
     </nav>
   );

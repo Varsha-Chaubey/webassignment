@@ -56,6 +56,7 @@ body {
 }
 
 .nav-item {
+  display: flex;
   justify-items: center;
   justify-content: center;
   align-items: center;
@@ -63,8 +64,8 @@ body {
 }
 
 .nav-icon {
-  height: 20px;
-  width: 20px;
+  height: 16px;
+  width: 16px;
   margin-right: 8px;
 }
 
@@ -201,9 +202,10 @@ body {
   padding: 10px 2px;
   justify-content: space-between;
   justify-items: center;
+  border-radius: 8px;
+  border: 1px solid #354529;
   
 }
-
 
 .item-container {
   background: linear-gradient(
@@ -211,17 +213,6 @@ body {
     #354529 -2.07%,
     rgba(34, 153, 82, 0) 38.17%
   );
-  
-  border: 1px solid; 
-  border-image: linear-gradient(
-      180deg,
-      #354529 -2.07%,
-      rgba(34, 153, 82, 0) 38.17%
-    )
-    1;
-    border-radius: 8px;
-    box-sizing: border-box; 
-    
 }
 
 .item-container:nth-child(odd) {
@@ -230,12 +221,7 @@ body {
     #354529 -2.07%,
     rgba(34, 153, 82, 0) 38.17%
   );
-  border-image: linear-gradient(
-      180deg,
-      #354529 -2.07%,
-      rgba(34, 153, 82, 0) 38.17%
-    )
-    ;
+  
    
 }
 
@@ -245,13 +231,7 @@ body {
     #62235c -2.07%,
     rgba(34, 153, 82, 0) 38.17%
   );
-  border-image: linear-gradient(
-      90deg,
-      #62235c -2.07%,
-      rgba(34, 153, 82, 0) 38.17%
-    )
-    ;
-   
+  
 }
 
 .text-container {
