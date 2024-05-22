@@ -45,11 +45,9 @@ const HeroSection = () => {
       </div>
       <div className="banner-container">
         <div className="banner-container-first">
-          <div style={{overflow:'hidden'}}>
+          <div >
             <h1>
-              Sign Up today
-               and claim your 
-              FREE box
+              Sign Up today and claim your FREE box
             </h1>
             <p>
               Unlock YOUR Free Box Today! Each box is a treasure trove of
