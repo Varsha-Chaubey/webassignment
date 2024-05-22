@@ -4,6 +4,7 @@ body {
   font-family: "Space Grotesk", sans-serif;
   font-optical-sizing: auto;
   box-sizing: border-box;
+
 }
 
 /* Container for the entire application */
@@ -496,10 +497,11 @@ a .heading-container {
 }
 
 /* for box card */
+
 .box-card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18%, 1fr));
+  gap: 8px;
 }
 
 .card-box {
@@ -583,7 +585,7 @@ a .heading-container {
   line-height: 19.14px;
   letter-spacing: -0.02em;
   border-radius: 8px;
-  padding: 12px 30px;
+  padding: 12px 20px;
   background-color: #6254ff;
   border: none;
 }
@@ -739,8 +741,20 @@ a .heading-container {
 }
 
 
+@media screen and (max-width: 899px) {
+  .box-card-container {
+    grid-template-columns: repeat(auto-fill, minmax(33.33%, 1fr)); 
+  }
+}
+
 @media screen and (max-width: 599px) {
-  .card-box {
-    width: calc(100% - 10px); 
+  .box-card-container {
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr)); 
+  }
+}
+
+@media screen and (max-width: 399px) {
+  .box-card-container {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr)); 
   }
 }
