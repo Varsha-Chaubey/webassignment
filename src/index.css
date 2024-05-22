@@ -709,9 +709,7 @@ a .heading-container {
 }
 
 @media screen and (max-width: 464px) {
-  .card-box {
-    width: 100%;
-  }
+ 
   .banner-container-first h1,
   .banner-container-first p {
     letter-spacing: 1px;
@@ -737,5 +735,12 @@ a .heading-container {
     font-size: 24px;
     line-height: 30.62px;
     letter-spacing: 2px;
+  }
+}
+
+
+@media screen and (max-width: 599px) {
+  .card-box {
+    width: calc(100% - 10px); 
   }
 }
