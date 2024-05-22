@@ -228,8 +228,7 @@ body {
   overflow-y: auto;
   height: calc(100vh - 60px);
 }
-a
-.heading-container {
+a .heading-container {
   display: flex;
   flex-direction: row;
   padding-left: 15px;
@@ -320,10 +319,9 @@ a
   background: linear-gradient(270deg, #9747ff -1.39%, #232325 78.26%);
   border-radius: 16px;
   margin-right: 5px;
-  padding: 0  30px;
+  padding: 0 2px 0 30px;
   width: 65%;
 }
-
 
 .banner-container-first h1 {
   font-size: 44px;
@@ -626,7 +624,6 @@ a
     white-space: nowrap;
   }
 
-  
   .data-container::-webkit-scrollbar {
     height: 8px;
   }
@@ -642,8 +639,8 @@ a
 
   .banner-container-first,
   .banner-container-second {
-    flex: 0 0 80%; 
-    width: 80%;
+    flex: 0 0 90%;
+    width: 90%;
   }
 
   .banner-container-first {
@@ -664,7 +661,7 @@ a
   }
 
   .banner-container-first button {
-    width: 124px; 
+    width: 124px;
     height: 48px;
     font-size: 14px;
     padding: 14px 24px 14px 24px;
@@ -676,7 +673,7 @@ a
   }
 
   .banner-container-second h1 {
-    font-size: 20px; 
+    font-size: 20px;
     line-height: 24px;
     letter-spacing: 2px;
   }
@@ -687,12 +684,12 @@ a
   }
 
   .image-container button {
-    font-size: 16px; 
+    font-size: 16px;
   }
 
   .banner-container-second img {
     max-width: 100%;
-    max-height: auto; 
+    max-height: auto;
   }
   .featured-container {
     padding: 10px;
@@ -705,23 +702,40 @@ a
 
   .sort p {
     font-size: 14px;
-  }.sort select {
+  }
+  .sort select {
     font-size: 14px;
   }
 }
 
-@media screen and  (max-width: 375px) {
-  .card-box{
+@media screen and (max-width: 464px) {
+  .card-box {
     width: 100%;
   }
-  
-}
-
-
-@media screen and (min-width: 992px) and (max-width: 1199px) {
-  .banner-container-first img{
-    height: 250px;
-    width: 250px;
+  .banner-container-first h1,
+  .banner-container-first p {
+    letter-spacing: 1px;
+    line-height: 15px;
   }
 }
 
+@media screen and (max-width: 980px) {
+  .banner-container-first img {
+    width: 230px;
+  }
+  .banner-container-first h1 {
+    font-size: 24px;
+    line-height: 30.62px;
+    letter-spacing: 2px;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .banner-container-first img {
+    width: 250px;
+  }
+  .banner-container-first h1 {
+    font-size: 24px;
+    line-height: 30.62px;
+    letter-spacing: 2px;
+  }
+}
